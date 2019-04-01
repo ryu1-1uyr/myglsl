@@ -19,6 +19,7 @@ void main() {
   uv -= .5;
   uv.y *= resolution.y / resolution.x;
   // uv *= uv;
+
   uv = rotate(uv, t) + .5;
 
 	gl_FragColor = (

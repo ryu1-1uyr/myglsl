@@ -16,6 +16,6 @@ void main() {
     freq / length(p + vec2(sin(time * 1.23 + 3.), 0)),
     freq / length(p + vec2(sin(time * 2.23 + 4.), 0)),
     freq / length(p + vec2(sin(time * 3.23 + 5.), 0)),
-    1.
+		0.1
   );
 }
