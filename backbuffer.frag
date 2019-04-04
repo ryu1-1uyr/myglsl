@@ -10,9 +10,9 @@ void main() {
 
   float c = 0.;
 	c += 0.01 / length(p - vec2(sin(t * 2.), cos(t * 1.)));
-	c += 0.01 / length(p - vec2(sin(t * 1.3), cos(t * .8)));
-	c += 0.01 / length(p - vec2(sin(t * .9 + time), cos(t * 1.7)));
-	c += 0.01 / length(p - vec2(cos(t * .47), sin(t * 1.9 + time)));
+	// c += 0.01 / length(p - vec2(sin(t * 1.3), cos(t * .8)));
+	// c += 0.01 / length(p - vec2(sin(t * .9 + time), cos(t * 1.7)));
+	// c += 0.01 / length(p - vec2(cos(t * .47), sin(t * 1.9 + time)));
 
 	vec4 b = texture2D(backbuffer, gl_FragCoord.xy / resolution);
 

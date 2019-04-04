@@ -32,7 +32,7 @@ void main() {
 
   vec4 b = texture2D(backbuffer, gl_FragCoord.xy / resolution);
 
-  gl_FragColor = c * vec4(0.2, 0.3, 0.8, 1) + (b  * 0.9) + d;
+  gl_FragColor = c * vec4(0.2, 0.3, 0.8, 1) + (b  * 0.9) + (d);
 
 
 }

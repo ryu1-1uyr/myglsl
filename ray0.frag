@@ -6,6 +6,7 @@ precision mediump float;
 
 uniform float time;
 uniform vec2 resolution;
+uniform vec2 mouse;
 
 vec3 lightDir = normalize(vec3(1.0, 1.0, 1.0));
 
@@ -36,7 +37,6 @@ void main( void )
     vec3 ray = normalize(vec3(pos, 0.0) - cameraPos);
     vec3 cur = cameraPos;
 
-
     vec2 p = (gl_FragCoord.xy * 2.0 -resolution) / min (resolution.x,resolution.y);
     float l = 0.1 * length(tan(time)/ p);
 
@@ -48,12 +48,13 @@ void main( void )
         if (d < 0.0001) {
             vec3 normal = getNormal(cur, size);
             float diff = dot(normal, lightDir);
-            col = vec3(diff) + vec3(0.1);
+            col = vec3(diff);// + vec3(0.1);
             break;
         }
 
         cur += ray * d;
     }
+
 
     gl_FragColor = vec4((col), 0.1);
 
