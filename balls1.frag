@@ -20,9 +20,10 @@ void main() {
 	);
 
 	for(int i=0; i<64; i++){
-		float dist = (2.0-0.4+cos(cur.x)+cos(cur.y)+cos(cur.z))/(abs(ray.x)+abs(ray.y)+abs(ray.z));
+		float dist = ((0.9-cos(cur.x)+cos(cur.y)+cos(cur.z))/(abs(ray.x)+abs(ray.y)+abs(ray.z)))*(time / 10000.);
 		if (dist < 0.) break;
 		cur += ray * dist;
 	}
-	gl_FragColor = vec4(vec3(length(cur - cam) / 64.0), 1);
+
+	gl_FragColor = vec4(vec3(length(cur - cam) / 128.0,length(cur - cam) / 128.0,length(cur - cam) / 64.0), 0.5);
 }
