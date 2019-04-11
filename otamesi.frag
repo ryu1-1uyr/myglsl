@@ -5,8 +5,14 @@ uniform sampler2D backbuffer;
 
 void main() {
 	vec2 p = (gl_FragCoord.xy * 2. - resolution) / min(resolution.x, resolution.y);
-	float t = time * 0.7;
+	float t = time * 1.9;
 	p = p * p * 2.;
+
+	p += vec2(0.5*sin(time + p.y*5.),0.8*sin(time + p.x* 4.));
+	p += vec2(0.7*sin(time + p.y*1.),0.6*sin(time + p.x* 4.));
+	p += vec2(0.9*sin(time + p.y*5.),0.4*sin(time + p.x* 4.));
+
+	// p = p * p * 2.;
 
   float c = 0.;
 
@@ -30,9 +36,10 @@ void main() {
 
 
 
-  vec4 b = texture2D(backbuffer, gl_FragCoord.xy / resolution);
+  vec4 b = texture2D(backbuffer, gl_FragCoord.xy / resolution * 1.02 - (vec2(0.01) ));
 
-  gl_FragColor = c * vec4(0.2, 0.3, 0.8, 1) + (b  * 0.9) + (d);
+  gl_FragColor = c * vec4(0.2, 0.3, 0.8, 1) + (b  * 0.95) + (d);
+
 
 
 }
