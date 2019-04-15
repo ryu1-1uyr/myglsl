@@ -24,6 +24,10 @@ void main() {
     vec2(sin(t*3.),tan(t *2.))
     );
 
+		// c += 0.01 / length(p -vec2(sin(t * 2.), cos(t * 1.)));
+		//
+		// c += 0.01 / length(p -vec2(sin(t*3.),tan(t *2.)));
+
     float d =0.0;
 
     d += 0.01/ length(p -
