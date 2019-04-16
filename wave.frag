@@ -26,10 +26,10 @@ void main() {
 		vec2(atan(time   )+3.9,abs(atan(time)) * 0.5)
 		);
 
-		c += 0.01 / length(p - vec2(abs(sin(time)*sin(time) ) ,0.5)); 
+		c += 0.01 / length(p - vec2(abs(sin(time)*sin(time) ) ,0.5));
 
     float d =0.0;
-
+		//
 		// d += 0.001 / length(p -
 		// vec2(abs(cos(time * 2. )),abs(tan(time)))
 		// );

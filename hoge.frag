@@ -19,11 +19,11 @@ void main() {
 		ray.z*cos(mouse.y)-ray.y*sin(mouse.y)
 	);
 
-	for(int i=0; i<32; i++){
-		float dist = ((2.0- 0.9-cos(cur.x)+cos(cur.y)+cos(cur.z))/(abs(ray.x)+abs(ray.y)+abs(ray.z)));
-		if (dist < 0.01) break;
-		cur += ray * dist;
+	for(int i=0; i<32 ; i++){
+		float dist = (2.0- 0.001 - cos(cur.x)+cos(cur.y)+cos(cur.z))/(abs(ray.x)+abs(ray.y)+abs(ray.z));
+		if (dist < 0.001) break;
+		cur += ray * abs(dist) ;
 	}
 
-	gl_FragColor = vec4(vec3(length(cur - cam) / 128.0,length(cur - cam) / 128.0,length(cur - cam) / 64.0), 0.5);
+	gl_FragColor = vec4(vec3(length(cur - cam) / 128.0,length(cur - cam) / 128.0,length(cur - cam) / 64.0), 0.1);
 }
