@@ -8,9 +8,9 @@ void main() {
 	float t = time * 1.9;
 	p = p * p * 2.;
 
-	p += vec2(0.5*sin(time + p.y*5.),0.8*sin(time + p.x* 4.));
-	p += vec2(0.7*sin(time + p.y*1.),0.6*sin(time + p.x* 4.));
-	p += vec2(0.9*sin(time + p.y*5.),0.4*sin(time + p.x* 4.));
+	// p += vec2(0.5*sin(time + p.y*5.),0.8*sin(time + p.x* 4.));
+	// p += vec2(0.7*sin(time + p.y*1.),0.6*sin(time + p.x* 4.));
+	// p += vec2(0.9*sin(time + p.y*5.),0.4*sin(time + p.x* 4.));
 
 	// p = p * p * 2.;
 
@@ -20,9 +20,9 @@ void main() {
     vec2(sin(t * 2.), cos(t * 1.))
     );
 
-  c += 0.01 / length(p -
-    vec2(sin(t*3.),tan(t *2.))
-    );
+  // c += 0.01 / length(p -
+  //   vec2(sin(t*3.),tan(t *2.))
+  //   );
 
 		// c += 0.01 / length(p -vec2(sin(t * 2.), cos(t * 1.)));
 		//
@@ -30,13 +30,13 @@ void main() {
 
     float d =0.0;
 
-    d += 0.01/ length(p -
-      vec2(cos(t),cos(time * 3.14))
-      );
-
-    d += 0.01 / length(p -
-      vec2(cos(t),cos(t))
-      );
+    // d += 0.01/ length(p -
+    //   vec2(cos(t),cos(time * 3.14))
+    //   );
+		//
+    // d += 0.01 / length(p -
+    //   vec2(cos(t),cos(t))
+    //   );
 
 
 
