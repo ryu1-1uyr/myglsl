@@ -8,6 +8,7 @@ void main() {
 	vec3 cam = vec3(time, sin(time/2.0), -6.5);
 	vec3 cur = cam;
 	vec3 ray = normalize(vec3(p, 1.0));
+	// vec3 hoge = vec3( sin(time*0.1) , sin(time*0.2), sin(time*0.3) );
 
 	ray.xz = vec2(
 		ray.x*cos(mouse.x)+ray.z*sin(mouse.x),
@@ -27,5 +28,5 @@ void main() {
 		len += dist;
 	}
 
-	gl_FragColor = vec4(vec3(length(cur - cam) / 64.0), 1);
+	gl_FragColor = vec4(vec3(length(cur - cam) / 64.0   ), 1);
 }
