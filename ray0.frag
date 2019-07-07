@@ -48,7 +48,7 @@ void main( void )
         if (d < 0.0001) {
             vec3 normal = getNormal(cur, size);
             float diff = dot(normal, lightDir);
-            col = vec3(diff);// + vec3(0.1);
+            col = vec3(diff)*vec3((sin(time*0.1)),(sin(time*0.2)),(sin(time*0.3)));
             break;
         }
 
