@@ -15,7 +15,7 @@ void main() {
   float f_1 =  pow(abs(sin(2.5 * th )), 0.9);
 
   float circle = x + y -0.2;
-  float naka = sin( ( (x+y-9.0)) * (time * 0.1));
+  float naka = sin( ( ((p.x * p.x )+(p.y * p.y )-9.0)) * (time * 0.1));
 
   gl_FragColor = vec4( vec3( tan( (naka / f_1 * 0.01) / sin(circle * (time*0.00001) ) )  ) , 0.5);
 
