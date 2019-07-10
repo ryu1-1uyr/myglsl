@@ -8,7 +8,7 @@ void main() {
   float l_x = 0.01 * length(sin(time) / p.x);
   float l_y = 0.01 * length(sin(time) / p.y);
 
-  float x = (p.x * p.x + p.y * p.y - 0.2);
-  gl_FragColor = vec4( vec3( sin(x * time  *time  )) , 0.5);
+  float x = (p.x * p.x + p.y * p.y - 0.002);
+  gl_FragColor = vec4( vec3( sin(x * 50000000.0 )) , 0.5);
 
 }
