@@ -14,8 +14,12 @@ void main() {
 
   float c = 0.;
 
+		// c += 0.02 / length(p -
+		// vec2(abs(cos(time * 2. )),atan(time))
+		// );
+
 		c += 0.02 / length(p -
-		vec2(abs(cos(time * 2. )),atan(time))
+		vec2(abs(sin(time * 0.8)), abs(sin(time)) )
 		);
 
 		c += 0.02 / length(p -
@@ -28,8 +32,12 @@ void main() {
 
 		c += 0.01 / length(p - vec2(abs(sin(time)*sin(time) ) ,0.5));
 
-    float d =0.0;
+		c += 0.01 / length(p - vec2(abs(sin(time)) ,0.5));
 
+    // float d = 0.0;
+		//
+		// float tate = 0.0;
+		//
 		// d += 0.001 / length(p -
 		// vec2(abs(cos(time * 2. )),abs(tan(time)))
 		// );
@@ -37,7 +45,7 @@ void main() {
 		// d += 0.005 / length(p -
 		// vec2(abs(sin(time * 2. )),tan(time))
 		// );
-		//
+
 		// d += 0.005 / length(p -
 		// vec2(tan(time   )+3.9,abs(sin(time)) * 0.5)
 		// );
@@ -45,8 +53,8 @@ void main() {
 		// d += 0.01 / length(p -
 		// vec2(abs(tan(time ) )+3.9,abs(cos(time)) * 0.5)
 		// );
-
-		d -= 0.01 / length(p - vec2(sin(t * 2.), sin(t * 0.2 )));
+		//
+		// d -= 0.01 / length(p - vec2(sin(t * 2.), sin(t * 0.2 )));
 
 
 
@@ -54,7 +62,10 @@ void main() {
   vec4 b = texture2D(backbuffer, gl_FragCoord.xy / resolution * 1.02 - (vec2(0.01) ));
 	//拡大して原点を0.01に辛いしている
 
-  gl_FragColor = c * vec4(0.2, 0.3, 0.8, 1) + (b  * 0.9 ) + (d*d) ;
+	 // gl_FragColor = c * vec4(0.2, 0.3, 0.8, 1) + (b  * 0.9 ) + (d*d) + vec2(1,1) ;
+
+
+  gl_FragColor = (c) * vec4(0.8, 0.3, 0.2, 1) + ( (c ) * vec4(0.2, 0.3, 0.8, 1)) + (( sin(b) * abs(sin(time * (c+c) ))) ) ;
 
 
 

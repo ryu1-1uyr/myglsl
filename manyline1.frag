@@ -9,6 +9,6 @@ void main() {
   float l_y = 0.01 * length(sin(time) / p.y);
 
   float x = (p.x * p.x + p.y * p.y - 0.2);
-  gl_FragColor = vec4( vec3( sin(x * time  *time  )) , 0.5);
+  gl_FragColor = vec4( vec3( tan(x * time  *2.0  ) + abs((p.x*p.x+p.y*p.y)*time) ) , 0.5);
 
 }
